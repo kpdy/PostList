@@ -31,6 +31,14 @@
 		55288E83275CA47C000B974E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288E82275CA47C000B974E /* Post.swift */; };
 		55288E85275CA4CD000B974E /* PostListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288E84275CA4CD000B974E /* PostListService.swift */; };
 		55288E87275CA4F6000B974E /* PostListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288E86275CA4F6000B974E /* PostListPresenter.swift */; };
+		55C5BBFB275CAB71002972F1 /* PostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5BBFA275CAB71002972F1 /* PostDetailVC.swift */; };
+		55C5BBFD275CAB83002972F1 /* CommentsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5BBFC275CAB83002972F1 /* CommentsTVCell.swift */; };
+		55C5BBFF275CAB88002972F1 /* CommentsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C5BBFE275CAB88002972F1 /* CommentsTVCell.xib */; };
+		55C5BC01275CAB99002972F1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5BC00275CAB99002972F1 /* Comment.swift */; };
+		55C5BC03275CAC63002972F1 /* PostDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5BC02275CAC63002972F1 /* PostDetailService.swift */; };
+		55C5BC05275CAC72002972F1 /* PostDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5BC04275CAC72002972F1 /* PostDetailPresenter.swift */; };
+		55C5BC07275CB055002972F1 /* EmptyTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5BC06275CB055002972F1 /* EmptyTVCell.swift */; };
+		55C5BC09275CB05A002972F1 /* EmptyTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C5BC08275CB05A002972F1 /* EmptyTVCell.xib */; };
 		AB77C0D58B7867E6F118DFD4 /* Pods_PostList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A780DB48ADBA24694EFCAC /* Pods_PostList.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +71,14 @@
 		55288E82275CA47C000B974E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		55288E84275CA4CD000B974E /* PostListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListService.swift; sourceTree = "<group>"; };
 		55288E86275CA4F6000B974E /* PostListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenter.swift; sourceTree = "<group>"; };
+		55C5BBFA275CAB71002972F1 /* PostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailVC.swift; sourceTree = "<group>"; };
+		55C5BBFC275CAB83002972F1 /* CommentsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTVCell.swift; sourceTree = "<group>"; };
+		55C5BBFE275CAB88002972F1 /* CommentsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTVCell.xib; sourceTree = "<group>"; };
+		55C5BC00275CAB99002972F1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		55C5BC02275CAC63002972F1 /* PostDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailService.swift; sourceTree = "<group>"; };
+		55C5BC04275CAC72002972F1 /* PostDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailPresenter.swift; sourceTree = "<group>"; };
+		55C5BC06275CB055002972F1 /* EmptyTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTVCell.swift; sourceTree = "<group>"; };
+		55C5BC08275CB05A002972F1 /* EmptyTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTVCell.xib; sourceTree = "<group>"; };
 		5771FADF423B0489CF801410 /* Pods-PostList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostList.release.xcconfig"; path = "Target Support Files/Pods-PostList/Pods-PostList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				55288E43275C9AE6000B974E /* ViewController.swift */,
+				55C5BBF8275CAB59002972F1 /* PostDetail */,
 				55288E5A275C9E8F000B974E /* PostList */,
 			);
 			path = Controllers;
@@ -253,8 +270,31 @@
 			isa = PBXGroup;
 			children = (
 				55288E82275CA47C000B974E /* Post.swift */,
+				55C5BC00275CAB99002972F1 /* Comment.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		55C5BBF8275CAB59002972F1 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				55C5BBF9275CAB64002972F1 /* Cell */,
+				55C5BBFA275CAB71002972F1 /* PostDetailVC.swift */,
+				55C5BC02275CAC63002972F1 /* PostDetailService.swift */,
+				55C5BC04275CAC72002972F1 /* PostDetailPresenter.swift */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		55C5BBF9275CAB64002972F1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				55C5BBFC275CAB83002972F1 /* CommentsTVCell.swift */,
+				55C5BBFE275CAB88002972F1 /* CommentsTVCell.xib */,
+				55C5BC06275CB055002972F1 /* EmptyTVCell.swift */,
+				55C5BC08275CB05A002972F1 /* EmptyTVCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +360,8 @@
 			files = (
 				55288E4C275C9AE7000B974E /* LaunchScreen.storyboard in Resources */,
 				55288E49275C9AE7000B974E /* Assets.xcassets in Resources */,
+				55C5BBFF275CAB88002972F1 /* CommentsTVCell.xib in Resources */,
+				55C5BC09275CB05A002972F1 /* EmptyTVCell.xib in Resources */,
 				55288E47275C9AE6000B974E /* Main.storyboard in Resources */,
 				55288E7F275CA44C000B974E /* PostListTVCell.xib in Resources */,
 			);
@@ -375,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55288E66275C9F09000B974E /* Reusable.swift in Sources */,
+				55C5BC01275CAB99002972F1 /* Comment.swift in Sources */,
 				55288E76275CA2CF000B974E /* APIError.swift in Sources */,
 				55288E6E275CA07D000B974E /* PostListVC.swift in Sources */,
 				55288E6C275C9F34000B974E /* NibOwnerLoadable.swift in Sources */,
@@ -383,7 +426,11 @@
 				55288E44275C9AE6000B974E /* ViewController.swift in Sources */,
 				55288E74275CA12A000B974E /* APIConstant.swift in Sources */,
 				55288E7D275CA446000B974E /* PostListTVCell.swift in Sources */,
+				55C5BBFD275CAB83002972F1 /* CommentsTVCell.swift in Sources */,
+				55C5BC07275CB055002972F1 /* EmptyTVCell.swift in Sources */,
 				55288E72275CA0FE000B974E /* Service.swift in Sources */,
+				55C5BC03275CAC63002972F1 /* PostDetailService.swift in Sources */,
+				55C5BBFB275CAB71002972F1 /* PostDetailVC.swift in Sources */,
 				55288E7A275CA310000B974E /* APISession.swift in Sources */,
 				55288E70275CA0E3000B974E /* APIManager.swift in Sources */,
 				55288E40275C9AE6000B974E /* AppDelegate.swift in Sources */,
@@ -392,6 +439,7 @@
 				55288E83275CA47C000B974E /* Post.swift in Sources */,
 				55288E87275CA4F6000B974E /* PostListPresenter.swift in Sources */,
 				55288E62275C9EE5000B974E /* StoryboardSceneBased.swift in Sources */,
+				55C5BC05275CAC72002972F1 /* PostDetailPresenter.swift in Sources */,
 				55288E68275C9F19000B974E /* UITableView+Reusable.swift in Sources */,
 				55288E85275CA4CD000B974E /* PostListService.swift in Sources */,
 			);
