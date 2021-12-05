@@ -13,6 +13,12 @@
 		55288E47275C9AE6000B974E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55288E45275C9AE6000B974E /* Main.storyboard */; };
 		55288E49275C9AE7000B974E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55288E48275C9AE7000B974E /* Assets.xcassets */; };
 		55288E4C275C9AE7000B974E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55288E4A275C9AE7000B974E /* LaunchScreen.storyboard */; };
+		55288E62275C9EE5000B974E /* StoryboardSceneBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288E61275C9EE5000B974E /* StoryboardSceneBased.swift */; };
+		55288E64275C9EFD000B974E /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288E63275C9EFD000B974E /* StoryboardBased.swift */; };
+		55288E66275C9F09000B974E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288E65275C9F09000B974E /* Reusable.swift */; };
+		55288E68275C9F19000B974E /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288E67275C9F19000B974E /* UITableView+Reusable.swift */; };
+		55288E6A275C9F27000B974E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288E69275C9F27000B974E /* NibLoadable.swift */; };
+		55288E6C275C9F34000B974E /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288E6B275C9F34000B974E /* NibOwnerLoadable.swift */; };
 		AB77C0D58B7867E6F118DFD4 /* Pods_PostList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A780DB48ADBA24694EFCAC /* Pods_PostList.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +33,12 @@
 		55288E48275C9AE7000B974E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55288E4B275C9AE7000B974E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55288E4D275C9AE7000B974E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55288E61275C9EE5000B974E /* StoryboardSceneBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSceneBased.swift; sourceTree = "<group>"; };
+		55288E63275C9EFD000B974E /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
+		55288E65275C9F09000B974E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		55288E67275C9F19000B974E /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		55288E69275C9F27000B974E /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		55288E6B275C9F34000B974E /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
 		5771FADF423B0489CF801410 /* Pods-PostList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostList.release.xcconfig"; path = "Target Support Files/Pods-PostList/Pods-PostList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,15 +92,117 @@
 		55288E3E275C9AE6000B974E /* PostList */ = {
 			isa = PBXGroup;
 			children = (
-				55288E3F275C9AE6000B974E /* AppDelegate.swift */,
-				55288E41275C9AE6000B974E /* SceneDelegate.swift */,
-				55288E43275C9AE6000B974E /* ViewController.swift */,
-				55288E45275C9AE6000B974E /* Main.storyboard */,
-				55288E48275C9AE7000B974E /* Assets.xcassets */,
-				55288E4A275C9AE7000B974E /* LaunchScreen.storyboard */,
-				55288E4D275C9AE7000B974E /* Info.plist */,
+				55288E59275C9E7E000B974E /* View */,
+				55288E56275C9DF4000B974E /* Helper */,
+				55288E55275C9DF0000B974E /* Resources */,
+				55288E54275C9DEB000B974E /* Controllers */,
+				55288E53275C9DE1000B974E /* AppDelegate */,
 			);
 			path = PostList;
+			sourceTree = "<group>";
+		};
+		55288E53275C9DE1000B974E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				55288E3F275C9AE6000B974E /* AppDelegate.swift */,
+				55288E41275C9AE6000B974E /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		55288E54275C9DEB000B974E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55288E43275C9AE6000B974E /* ViewController.swift */,
+				55288E5A275C9E8F000B974E /* PostList */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		55288E55275C9DF0000B974E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55288E58275C9E0D000B974E /* Plist */,
+				55288E57275C9E04000B974E /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		55288E56275C9DF4000B974E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				55288E5D275C9EA6000B974E /* Constant */,
+				55288E5C275C9EA2000B974E /* Extension */,
+				55288E5E275C9EAA000B974E /* Network */,
+				55288E5F275C9EBA000B974E /* Reusable */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		55288E57275C9E04000B974E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				55288E48275C9AE7000B974E /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		55288E58275C9E0D000B974E /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				55288E4D275C9AE7000B974E /* Info.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		55288E59275C9E7E000B974E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55288E45275C9AE6000B974E /* Main.storyboard */,
+				55288E4A275C9AE7000B974E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55288E5A275C9E8F000B974E /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		55288E5C275C9EA2000B974E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		55288E5D275C9EA6000B974E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		55288E5E275C9EAA000B974E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		55288E5F275C9EBA000B974E /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				55288E61275C9EE5000B974E /* StoryboardSceneBased.swift */,
+				55288E63275C9EFD000B974E /* StoryboardBased.swift */,
+				55288E65275C9F09000B974E /* Reusable.swift */,
+				55288E67275C9F19000B974E /* UITableView+Reusable.swift */,
+				55288E69275C9F27000B974E /* NibLoadable.swift */,
+				55288E6B275C9F34000B974E /* NibOwnerLoadable.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,9 +321,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55288E66275C9F09000B974E /* Reusable.swift in Sources */,
+				55288E6C275C9F34000B974E /* NibOwnerLoadable.swift in Sources */,
+				55288E6A275C9F27000B974E /* NibLoadable.swift in Sources */,
 				55288E44275C9AE6000B974E /* ViewController.swift in Sources */,
 				55288E40275C9AE6000B974E /* AppDelegate.swift in Sources */,
 				55288E42275C9AE6000B974E /* SceneDelegate.swift in Sources */,
+				55288E64275C9EFD000B974E /* StoryboardBased.swift in Sources */,
+				55288E62275C9EE5000B974E /* StoryboardSceneBased.swift in Sources */,
+				55288E68275C9F19000B974E /* UITableView+Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +481,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PostList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PostList/Resources/Plist/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -390,7 +510,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PostList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PostList/Resources/Plist/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
