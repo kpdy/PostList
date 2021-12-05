@@ -86,8 +86,10 @@ extension PostListVC: UITableViewDelegate {
         }
         
         if let objPost = dataSource.itemIdentifier(for: indexPath) {
-            print(objPost)
             // TODO: push to the detail screen and also pass the selected post object.
+            let objVC = PostDetailVC.instantiate()
+            objVC.post = objPost
+            self.navigationController?.pushViewController(objVC, animated: true)
         }
         
     }

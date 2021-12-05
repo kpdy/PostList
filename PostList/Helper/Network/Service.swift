@@ -14,6 +14,8 @@ enum Service {
     
     case getPosts
     
+    case getComments(postId: Int)
+    
 }
 
 extension Service: TargetType {
@@ -35,7 +37,10 @@ extension Service: TargetType {
             
         case .getPosts:
             return "posts"
-           
+            
+        case .getComments(_):
+            return "comments"
+            
         }
     }
     
@@ -46,6 +51,9 @@ extension Service: TargetType {
         switch self {
             
         case .getPosts:
+            return .get
+            
+        case .getComments(_):
             return .get
             
         }
@@ -60,6 +68,9 @@ extension Service: TargetType {
             
         case .getPosts:
             return .requestPlain
+            
+        case .getComments(postId: let postId):
+            return .requestParameters(parameters: ["postId": postId], encoding: URLEncoding.queryString)
             
         }
         
